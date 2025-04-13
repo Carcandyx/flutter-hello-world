@@ -33,26 +33,13 @@ class MyHomePage extends StatelessWidget {
     var mainText = "Hello World";
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Title(mainTitle: mainTitle),
-          CenteredText(mainText: mainText),
+          Text(mainText),
         ],
       ),
     );
-  }
-}
-
-class CenteredText extends StatelessWidget {
-  const CenteredText({
-    super.key,
-    required this.mainText,
-  });
-
-  final String mainText;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text(mainText));
   }
 }
 
@@ -66,9 +53,9 @@ class Title extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(
+    return Text(
       mainTitle,
       style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-    ));
+    );
   }
 }
