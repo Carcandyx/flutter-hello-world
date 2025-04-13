@@ -66,6 +66,9 @@ class Title extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(mainTitle));
+    return Center(child: Text(
+      mainTitle,
+      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    ));
   }
 }
